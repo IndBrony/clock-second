@@ -9,11 +9,13 @@ func TemplateClockTest(t *testing.T, input string, expectedOutput int) {
 }
 
 func TestClock(t *testing.T) {
-	TemplateClockTest(t, "ai", 60)
+	TemplateClockTest(t, "aiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaia", 60)
 	TemplateClockTest(t, "aa", 1)
 	TemplateClockTest(t, "aaa", 2)
 	TemplateClockTest(t, "aai", 1)
 	TemplateClockTest(t, "aaii", 60)
+	TemplateClockTest(t, "aaiiaa", 1)
+	TemplateClockTest(t, "aaaaaaaaaaaaaaaaaaaaaa", 21)
 
 	TemplateClockTest(t, "ii", 59)
 	TemplateClockTest(t, "iii", 58)
